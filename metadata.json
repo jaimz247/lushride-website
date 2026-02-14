@@ -1,0 +1,7 @@
+{
+  "name": "LushRide - Premium Mobility Lagos",
+  "description": "A high-end luxury chauffeur and mobility service landing page for Lagos' elite, featuring platinum aesthetics and marble sophistication.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
