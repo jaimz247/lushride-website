@@ -13,6 +13,11 @@
     <meta property="og:description" content="On-demand luxury mobility in Lagos. Experience the Platinum Standard." />
     <meta property="og:image" content="https://images.unsplash.com/photo-1610647752706-3bb12232b3ab?auto=format&fit=crop&q=80&w=1200" />
 
+    <!-- Process Shim for Environment Variables -->
+    <script>
+      window.process = { env: { API_KEY: '' } };
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +27,7 @@
         font-family: 'Inter', sans-serif;
         background-color: #FFFFFF;
         scroll-behavior: smooth;
+        margin: 0;
       }
       h1, h2, h3, h4, .serif {
         font-family: 'Playfair Display', serif;
@@ -76,5 +82,6 @@
 </head>
   <body>
     <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>

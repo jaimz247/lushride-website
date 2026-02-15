@@ -26,7 +26,13 @@ const ConciergeChat: React.FC = () => {
     setIsTyping(true);
 
     try {
-      const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+      // Robust key check
+      const apiKey = process.env.API_KEY;
+      if (!apiKey) {
+        throw new Error("API Configuration Missing");
+      }
+
+      const ai = new GoogleGenAI({ apiKey });
       const response = await ai.models.generateContent({
         model: 'gemini-3-pro-preview',
         contents: userMessage,
